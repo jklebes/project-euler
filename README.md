@@ -1,4 +1,4 @@
 # project-euler
-Programming languages practice
+Programming languages practice: Haskell, Python, C++
 
 The questions can be seen on https://projecteuler.net/ .

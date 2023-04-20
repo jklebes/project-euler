@@ -8,7 +8,7 @@ It's allowed to make solutions to the first 100 questions public.  But try to so
 All solutions uploaded so far are in hackerrank format, taking a file with lines od space-separated test case integers as input.
 
 
-| Problem| haskell | python | C++ |
+| | haskell | python | C++ |
 | --- | --- | --- | --- |
 | 1 | x |  |  | 
 | 2 |  | x |  |

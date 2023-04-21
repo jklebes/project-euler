@@ -15,19 +15,25 @@ int powerDigitSum(int n){
     int digits[len]={ }; // initialize to zero
     int d;
     int carry;
+    int filled=1;
     digits[0]=1; //initial state: 2^0=1
     for (int i=1;  i<=n; i++){ //double n times
     carry=0;
-        for (int j=0;j<len;j++){ //go over all digits
+        for (int j=0;j<=filled;j++){ //go over all digits
             d=digits[j]*2+carry;
             if (d>=10){
                 digits[j]=d-10;
-                carry=1;                
+                carry=1;
             }
             else{
                 digits[j]=d;
                 carry=0;
             }
+    
+        }
+        if (carry==1){
+            digits[filled+1]=1;
+            filled++;
         }
     }
     int sum = 0;

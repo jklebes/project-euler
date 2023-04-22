@@ -21,8 +21,9 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 9 | x |  |  |  |
 | 10 | x |  |  |  |
 | 15 |  | x |  |  |
-| 16 |  |  |  (x)|  |
+| 16 | x |  |  (x)|  |
 | 17 |  | x |  |  |
+| 17 | x |  |  |  |
 | 19 |  |  |  | matlab |
 | 20 |  | x |  |  |
 | 25 |  |  | x|  |

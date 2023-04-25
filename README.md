@@ -1,4 +1,7 @@
 # project-euler
+
+![Python](https://github.com/jklebes/project-euler/.github/workflows/python-app.yml/badge.svg)
+
 Programming languages practice: Haskell, Python, C++
 
 The questions can be seen on https://projecteuler.net/ .

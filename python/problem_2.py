@@ -22,6 +22,7 @@ def sumEvenFibonacci(n):
     return sum_
 
 if __name__=="__main__":
+
     t = int(input().strip())
     for a0 in range(t):
         n = int(input().strip())

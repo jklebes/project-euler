@@ -3,7 +3,12 @@
 import sys
 import math
 
-def largest_prime(n):
+def largest_prime_factor(n):
+    """
+    What is the largest prime factor of n?
+    >>> 13195
+    29
+    """
     i=1
     #list all (prime and composite) factors of n
     # only goes up to sqrt(n) - there is at most one prime factor, p2, greater than sqrtn
@@ -26,8 +31,8 @@ def largest_prime(n):
             return i
     return s[0]
 
-
-t = int(input().strip())
-for a0 in range(t):
-    n = int(input().strip())
-    print(largest_prime(n))
+if __name__=="__main__":
+    t = int(input().strip())
+    for a0 in range(t):
+        n = int(input().strip())
+        print(largest_prime_factor(n))

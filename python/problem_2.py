@@ -25,4 +25,4 @@ if __name__=="__main__":
     t = int(input().strip())
     for a0 in range(t):
         n = int(input().strip())
-        print(sumEvenFibonnaci(n))
+        print(sumEvenFibonacci(n))

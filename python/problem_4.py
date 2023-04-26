@@ -1,7 +1,5 @@
 #!/bin/python3
 
-import sys
-
 ns =[]
 
 t = int(input().strip())

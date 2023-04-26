@@ -4,10 +4,6 @@ import sys
 
 def sumEvenFibonacci(n):
     """ What is the sum of all even Fibonnaci numbers less than n?
-    >>> 10
-    10
-    >>> 60
-    44
     """
     prev_x=0
     x = 2

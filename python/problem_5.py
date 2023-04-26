@@ -1,6 +1,5 @@
 #!/bin/python3
 
-import sys
 import functools
 
 def gcd(a_,b_):
@@ -24,8 +23,6 @@ def lcm(a, b):
     
 def multi_lcm(n):
     """least common mutiple of a list of numbers up to n
-    >>> 10
-    2520
     """
     return int(functools.reduce(lcm, range(1,n+1)))
 

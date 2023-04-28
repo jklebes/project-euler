@@ -23,7 +23,7 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 8 | x |  |  |  |
 | 9 | x |  |  |  |
 | 10 | x |  |  |  |
-| 11 | x |  |  |  |
+| 11 |   | x |  |  |
 | 12 | (x) |  |  |  |
 | 15 |  | x |  |  |
 | 16 | x |  |  (x)|  |

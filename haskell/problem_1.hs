@@ -10,22 +10,16 @@ main = do
     let answers = map ( sumOf35multiples . (subtract 1)) ns
     mapM (putStrLn . show) $ answers
 
+--Task: sum of all multiples of 3 or 5 up to n
+--Method: sum multiples of 3, 5; subtract double-counted multiples of 15
 sumOf35multiples :: Integral a =>  a -> a
-sumOf35multiples x = subtract bothsum $ ((+) (sumOfPatternEuler 5 x) (sumOfPatternEuler 3 x) )
- where bothsum = sumOfPatternEuler 15 x
+sumOf35multiples x = subtract bothsum $ ((+) (sumOfPattern 5 x) (sumOfPattern 3 x) )
+ where bothsum = sumOfPattern 15 x
 
---this avoids saving the whole list of numbers before summing
+-- sum of multiples of s up to x
 sumOfPattern :: Integral a => a -> a -> a
-sumOfPattern s x
- | x < s = 0 -- 0 if we start below s
- | x == s = s --base if we land on s
- | mod x s == 0 = x + (sumOfPattern s (subtract s x)) --if at multiple of s: add the number
- | otherwise = sumOfPattern s (x-1)  --descnd until we find multiple of s to start at
-
---the smarter way
-sumOfPatternEuler :: Integral a => a -> a -> a
-sumOfPatternEuler s x 
+sumOfPattern s x 
  |even numInts = (1+numInts) * (div numInts 2) * s
- |otherwise = (+) (numInts * (div ((subtract 1) numInts ) 2) * s ) (s*numInts)
+ |otherwise = numInts * ((+) (div ((subtract 1) numInts ) 2) 1) * s 
  where 
   numInts = div x s

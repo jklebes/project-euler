@@ -11,7 +11,8 @@ main = do
     let ns = map (read::String->Int) $ words ns_temp
     let answers = map f ns
     mapM (putStrLn . show) $ answers
-  
+
+-- sum of digits of 2^a  
 f :: Int -> Int  
 f a = sumStr $ show $ twoToN a 
     where twoToN n = 2^n

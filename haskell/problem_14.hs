@@ -11,12 +11,16 @@ main = do
  --output
  mapM putStrLn answers
 
+-- which stating number under n yields longest 
+-- Collatz sequence ? 
+
+-- length of a sequence
 lenCollatzSeq :: Integral a => a -> a
 lenCollatzSeq 1 = 1
 lenCollatzSeq x
  | even x = 1 + (lenCollatzSeq (x `div` 2))
  | otherwise = 1 + (lenCollatzSeq (3*x + 1))
- 
+
 -- fills with most successful number so far
 -- for example if [1,2,3,4,5,6,7] generate sequence lengths
 -- [1,3,5,3,3,7,4] this returns [1,2,3,3,3,6,6]

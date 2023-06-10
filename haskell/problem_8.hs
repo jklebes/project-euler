@@ -17,6 +17,7 @@ main = do
         let ans = biggestProd k digits
         putStrLn (show ans)
 
+-- biggest produc of m adjacent digits in the list
 biggestProd m digitsList = maximum (map product (sublists m digitsList))      
 sublists m digitsList = map (\x -> sublist x m digitsList) [0..((length digitsList)-m)]
 sublist x m digitsList = drop x (take (m+x) digitsList)

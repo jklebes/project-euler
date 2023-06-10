@@ -9,7 +9,7 @@ tens = {2: "Twenty", 3: "Thirty", 4: "Forty", 5: "Fifty",
 
 def tensname(a, b):
     if a != "0" and b != "0":
-        return tens[int(b)]+" "+digit[int(a)]
+        return tens[int(b)] + " " + digit[int(a)]
     elif b == "0" and a != '0':
         return digit[int(a)]
     elif b != '0' and a == '0':
@@ -25,12 +25,12 @@ def hundredsname(x):
         return digit[int(x[0])]
     elif len(x) == 2:
         if x[1] == "1":
-            return teens[int(x[1]+x[0])]
+            return teens[int(x[1] + x[0])]
         else:
             return tensname(x[0], x[1])
     else:
         if x[1] == "1":
-            t = teens[int(x[1]+x[0])]
+            t = teens[int(x[1] + x[0])]
         else:
             t = tensname(x[0], x[1])
             if t is None:
@@ -42,13 +42,18 @@ def hundredsname(x):
 
 
 def name(n_):
+    """
+    Name of n
+    Input: an integer n as string
+    Output: english name of n
+    """
     n = list(reversed(n_))
     i = 0
     ans = ""
     i = 0
     j = 0
     while i < len(n):
-        threegroup = n[i:i+3]
+        threegroup = n[i:i + 3]
         i += 3
         # print(threegroup)
         threename = hundredsname(threegroup)
@@ -58,7 +63,10 @@ def name(n_):
     return ans
 
 
-t = int(input())
-for i in range(t):
-    n = input()
-    print(name(n))
+if __name__ == "__main__":
+    t = int(input())
+    for i in range(t):
+        n = input()
+        # hackerrank: return name of n
+        # original project euler would be return len(name(n))
+        print(name(n))

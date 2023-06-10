@@ -1,8 +1,5 @@
 #!/bin/python3
 
-import sys
-
-
 def sumEvenFibonacci(n):
     """ What is the sum of all even Fibonnaci numbers less than n?
     """
@@ -13,7 +10,7 @@ def sumEvenFibonacci(n):
         sum_ += x
         # the next even fibonacci number is generated from two
         # previous even fibonacci numbers as a_{i+1}= 4*a_i + a_{i-1}
-        new_x = x*4+prev_x
+        new_x = x * 4 + prev_x
         prev_x = x
         x = new_x
     return sum_

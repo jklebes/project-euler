@@ -7,8 +7,9 @@
 using namespace std;
 
 int powerDigitSum(int n){
+    // representing the big number as array of digits
     // handles big enough ints, fast enough
-	// for the project euler question but too slow
+    // for the project euler question but too slow
     // for hackerrank
     
     // 2^N as an array of digits

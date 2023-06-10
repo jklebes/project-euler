@@ -4,6 +4,9 @@ def squarediff(n):
     """Sum of the squares of 1 to n
     minus
     sum of 1 to n, squared
+
+    solution: equals two times sum of triangle numbers
+    derivations: ??
     """
     sum_ = 0
     triangle = 0

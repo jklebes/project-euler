@@ -20,14 +20,14 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 5 |  | x |  |  |
 | 6 |  | x |  |  |
 | 7 | x |  |  |  |
-| 8 | x |  |  |  |
-| 9 | x |  |  |  |
-| 10 | x |  |  |  |
+| 8 | x|  |  |  |
+| 9 | x-missing |  |  |  |
+| 10 | x-missing |  |  |  |
 | 11 |   | x |  |  |
 | 12 | (x) |  |  |  |
 | 13 | x |  |  |  |
 | 14 | (x) |  |  |  |
-| 15 |  | x |  |  |
+| 15 |  | x-missing |  |  |
 | 16 | x |  |  (x)|  |
 | 17 |  | x |  |  |
 | 18 | x |  |  |  |

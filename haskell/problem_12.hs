@@ -10,7 +10,8 @@ main = do
     let ns = map (read::String->Int) $ words ns_temp
     let answers = map ans ns
     mapM (putStrLn . show) $ answers
-                         
+
+-- find first triangle number with over n factors                          
 ans :: Int -> Int
 ans n = case find (\x -> numFactors x > n) triangles of
     Just y -> y  --unwrap the Maybe Int returned by Dat.List find 

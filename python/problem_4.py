@@ -1,14 +1,27 @@
 #!/bin/python3
 
-ns = []
+def largest_palindromes(ns):
+    # 'What is the largest palindrome made from the
+    # product of two three-digit numbers?'
+    # hackerrank version: return largest less than n, for list of ns
 
-t = int(input().strip())
-for a0 in range(t):
-    n = int(input().strip())
-    ns.append(n)
+    maxN = max(ns)
+    # generate all palindromes that could be needed in this query set
+    palindromes = sorted(set([(a * b) for a in range(100, 1000) for b in range(
+        100, 1000) if (a * b) > 100000 and (a * b) <= maxN
+        and palindrome(a * b)]))
 
-maxN = max(ns)
+    # return largest for each query
+    ans=[]
+    for n in ns:
+        bestP = palindromes[-1]
+        for p in palindromes[::-1]:
+            bestP = p
+            if p < n:
+                break  # <, not <=, makes test case 4 right
+        ans.append(bestP)
 
+    return ans
 
 def palindrome(x):
     string = str(x)
@@ -18,16 +31,12 @@ def palindrome(x):
         return False
 
 
-palindromes = list(set([(a*b) for a in range(100, 1000) for b in range(
-    100, 1000) if (a*b) > 100000 and (a*b) <= maxN and palindrome(a*b)]))
-palindromes.sort()
-
-# print(len(palindromes))
-
-for n in ns:
-    bestP = palindromes[-1]
-    for p in palindromes[::-1]:
-        bestP = p
-        if p < n:
-            break  # <, not <=, makes test case 4 right
-    print(bestP)
+if __name__ == "__main__":
+    # collect, process all queries at once
+    ns = []
+    t = int(input().strip())
+    for a0 in range(t):
+        n = int(input().strip())
+        ns.append(n)
+        results = largest_palindromes(ns)
+        print("\n".join([str(x) for x in results]))

@@ -15,7 +15,19 @@ main = do
         let ns =  map ( map (read::String->Int) )$ ns_str
         (putStrLn .show) $ f $ reverse ns
                                 
-                            
+-- maximum sum along a path through the triangle.
+-- The triangle is an irregular list of list of ints.
+-- The function f takes the triangle and merges two rows
+-- (the bottom row and the second-to-last row)
+-- in a certain way, replacing each entry in the
+-- second-to-last row with the max sum of itself 
+-- and one of its two children.
+-- The function combine processes the triangle
+-- by repeatedly merging the last row upwards
+-- into the second to last.  Finally the triangle
+-- is reduced to the one top element with the maximum sum
+-- merged into it.
+
 f :: [[Int]] -> Int
 f [[]] = -1
 f [[x]] = x

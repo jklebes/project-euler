@@ -1,7 +1,7 @@
 import Control.Applicative
 import Control.Monad
 import System.IO
-
+import Data.List
 
 main :: IO ()
 main = do
@@ -9,24 +9,28 @@ main = do
     let t = read t_temp :: Int
     forM_ [1..t] $ \a0  -> do
         n_temp <- getLine
-        let n_t = words n_temp
-        let n = read $ n_t!!0 :: Int
-        let k = read $ n_t!!1 :: Int
-        num <- getLine
-        let digits = map (read . (:"")) num :: [Int]
-        let ans = biggestProd k digits
-        putStrLn (show ans)
+        let n = read n_temp :: Int
+        putStrLn $ show $ ans n
 
-biggestProd m digitsList = maximum (map product (sublists m digitsList))      
-sublists m digitsList = map (\x -> sublist x m digitsList) [0..((length digitsList)-m)]
-sublist x m digitsList = drop x (take (m+x) digitsList)
+tripleSum :: Int -> Int -> Int
+tripleSum p q = 2*p^2 + 2*p*q
 
-getMultipleLines :: Int -> IO [String]
+tripleProd :: Int -> (Int, Int) -> Int
+tripleProd n (p,q) = (p^2 - q^2)*(2*q*p)*(p^2 + q^2)*r^3
+  where r = n `div` (tripleSum p q)
 
-getMultipleLines n
-    | n <= 0 = return []
-    | otherwise = do          
-        x <- getLine         
-        xs <- getMultipleLines (n-1)    
-        let ret = (x:xs)    
-        return ret
+ans :: Int -> Int
+ans n = mymaximum (map (tripleProd n) (filter (\t -> checkpq t n) (psqsToCheck n)))
+
+mymaximum [] = -1
+mymaximum xs = maximum xs
+
+psqsToCheck :: Int -> [(Int, Int)]
+psqsToCheck n = [(p,q) | p <- psToCheck n, q <- qsToCheck p n]
+
+psToCheck n = takeWhile (\x -> 2*x^2 <= n ) [1..]
+
+qsToCheck p n = takeWhile (\x -> (2*p^2 + 2*x*p) <= n ) [1..(p-1)]
+
+checkpq :: (Int,Int) -> Int -> Bool
+checkpq (p,q) n = n `mod` (tripleSum p q) == 0

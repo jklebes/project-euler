@@ -33,6 +33,7 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 18 | x |  |  |  |
 | 19 |  |  |  | matlab |
 | 20 |  | x |  |  |
+| 21 |  |   |  | (fortran) |
 | 25 |  |  | x|  |
 | 34 |  | x |  |  |
 | 67 | x |  |  |  |

@@ -1,5 +1,6 @@
 *unfinished*
 *.pyc
+*.swp
 
 haskell/*
 !haskell/*.hs

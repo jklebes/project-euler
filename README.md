@@ -38,5 +38,6 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 23 |(x)| |  | |
 | 24 | | |  |(clojure) |
 | 25 |  |  | x|  |
+| 26 |  | x | |  |
 | 34 |  | x |  |  |
 | 67 | x |  |  |  |

@@ -52,6 +52,16 @@ def test_problem_20():
     assert (p20.factorial_digit_sum(6) == 9)
     assert (p20.factorial_digit_sum(10)==27)
 
+def test_problem_20():
+    import problem_26 as p26
+    assert (p26.recurring(3)==1)
+    assert (p26.recurring(7)==6)
+    assert (p26.recurring(977)==879)
+    assert (p26.maxRecurring(5)==3)
+    assert (p26.maxRecurring(10000)==9967)
+    # by pe, not hackerrank convention: max <=n can be n
+    assert (p26.maxRecurring(977)==977)
+
 if __name__ == "__main__":
     import os
     os.chdir('python')

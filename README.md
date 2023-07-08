@@ -38,4 +38,5 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 25 |  |  | x|  |
 | 26 |  | x | |  |
 | 34 |  | x |  |  |
+| 39 |  | x |  |  |
 | 67 | x |  |  |  |

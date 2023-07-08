@@ -32,6 +32,6 @@ if __name__=="__main__":
     for i in range(t):
         n=int(input())
         queries.append(n)
-    periods = [recurring(1,i) for i in range(1, max(queries))]
+    periods = [recurring(i) for i in range(1, max(queries))]
     answers = [str(argMaxUnder(periods,n)) for n in queries]
     print('\n'.join(answers))

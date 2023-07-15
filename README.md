@@ -22,7 +22,7 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 9 | x|  |  |  |
 | 10 | x|  |  |  |
 | 11 |   | x |  |  |
-| 12 | (x) |  |  |  |
+| 12 | x |  |  |  |
 | 13 | x |  |  |  |
 | 14 | (x) |  |  |  |
 | 15 |  | x |  |  |
@@ -40,3 +40,4 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 34 |  | x |  |  |
 | 39 |  | x |  |  |
 | 67 | x |  |  |  |
+| 92 |  |  |  | (clojure) |

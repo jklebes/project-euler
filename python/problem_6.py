@@ -10,10 +10,10 @@ def squarediff(n):
     """
     sum_ = 0
     triangle = 0
-    for a in range(1, n+1):
-        sum_ += a*triangle
+    for a in range(1, n + 1):
+        sum_ += a * triangle
         triangle += a
-    return 2*sum_
+    return 2 * sum_
 
 
 if __name__ == "__main__":

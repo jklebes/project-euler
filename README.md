@@ -24,7 +24,7 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 11 |   | x |  |  |
 | 12 | x |  |  |  |
 | 13 | x |  |  |  |
-| 14 | (x) |  |  |  |
+| 14 | x |  |  |  |
 | 15 |  | x |  |  |
 | 16 | x |  |  (x)|  |
 | 17 |  | x |  |  |

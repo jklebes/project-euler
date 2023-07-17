@@ -1,20 +1,26 @@
 import Control.Applicative
 import Control.Monad
 import System.IO
-import Data.Set
-import Algebra.Graph.Internal (cartesianProductWith)
-
+import Data.List
 
 main = do
-    putStrLn . show $ (sum [1..28123] )-  (sum $ abundantSums 28123)
+    t_temp <- getLine
+    let t = read t_temp :: Int
+    ns_temp <- getContents
+    let ns = map (read::String->Int) $ words ns_temp
+    let answers = map abundantSum ns
+    mapM (putStrLn) $ answers
 
--- totally naive and inefficient way
-abundantSums :: Integral a => a -> [a]
-abundantSums x = toList $ cartesianProductWith (\ i j -> if ((i+j)<=x) then (i+j) else 0) (fromList abundant) (fromList abundant)
-    where abundant = listAbundant x
+abundantSum ::  Int -> [Char]
+abundantSum x
+    | x<24 = "NO"
+    | x>20161 = "YES"
+    | otherwise = if elem x $ sumList x then "YES" else "NO"
     
-listAbundant n = [ i | i <- [1..n], factorSum i > i]
+sumList x = [n+m | n <- abundant, m <- dropWhile (<n) $ takeWhile (<= (x-n)) $ abundant] 
+    where abundant = [ i | i <- [12..x], factorSum i > i]
 
-factorSum n = sum $ listFactors n
+factorSum n = (+) 1 $ (\ x -> (-) x sqrt_ ) $ sum $ [i+(div n i) | i<-[2.. (floor $ sqrt $ fromIntegral n)] , mod n i == 0] 
+    where sqrt_ = if (sqrt__^2 == n) then sqrt__ else 0
+          sqrt__ = floor $ sqrt $ fromIntegral n 
 
-listFactors n = [i | i<-[1.. (n-1)] , mod n i == 0]

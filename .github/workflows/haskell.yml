@@ -20,8 +20,6 @@ jobs:
       with:
         ghc-version: '8.10.3'
         cabal-version: '3.4'
-    - name: cd
-      run: cd haskell
     - name: Cache
       uses: actions/cache@v3
       env:
@@ -36,6 +34,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        cd haskell
         cabal update
         cabal build --only-dependencies --enable-tests --enable-benchmarks
     - name: Build

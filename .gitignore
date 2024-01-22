@@ -2,6 +2,8 @@
 *.pyc
 *.swp
 
+python/__pycache__/
+
 haskell/*
 !haskell/*.hs
 

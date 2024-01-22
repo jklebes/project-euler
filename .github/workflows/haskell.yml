@@ -34,10 +34,9 @@ jobs:
 
     - name: Install dependencies
       run: |
-        cd haskell
         cabal update
         pwd
-        cabal build --only-dependencies --enable-tests --enable-benchmarks
+        cabal build all --only-dependencies --enable-tests --enable-benchmarks
     - name: Build
       run: cabal build --enable-tests --enable-benchmarks all
     - name: Run tests

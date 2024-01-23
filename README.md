@@ -42,3 +42,10 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 39 |  | x |  |  |
 | 67 | x |  |  |  |
 | 92 |  |  |  | (clojure) |
+
+### TODO
+
+- Get rid of this hackerrank interactive IO list of queries format, set up each problem to run a single query at a time in a unified way across languages.
+- Tests for each problem.  The simple example and further corner cases, but NOT the main Project Euler query, to not publically hard-code answers into my tests.
+  - Or test against Project Euler main answers as secrets.
+- Check test coverage.

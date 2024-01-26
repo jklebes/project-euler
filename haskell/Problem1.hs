@@ -1,3 +1,5 @@
+module Problem1 (sumOfPattern, sumOf35multiples) where
+
 import Control.Applicative
 import Control.Monad
 import System.IO

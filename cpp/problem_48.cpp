@@ -50,7 +50,6 @@ class TenDigitInt{
 };
 
 int main(){
-    TenDigitInt x= TenDigitInt(998887776653534334ull);
     TenDigitInt result = TenDigitInt(0);
     uint query = 10;
     for (int i=1; i<=query; i++){

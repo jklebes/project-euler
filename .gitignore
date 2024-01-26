@@ -11,4 +11,4 @@ haskell/*
 
 clojure/.*
 
-*/.vscode/
+cpp/.vscode/

@@ -40,6 +40,7 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 26 |  | x | |  |
 | 34 |  | x |  |  |
 | 39 |  | x |  |  |
+| 48 |  |   | x|  |
 | 67 | x |  |  |  |
 | 92 |  |  |  | (clojure) |
 

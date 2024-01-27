@@ -46,6 +46,7 @@ Most solutions uploaded so far are in hackerrank format, taking a file with line
 | 39 |  | x |  |  |
 | 48 |  |   | x|  |
 | 67 | x |  |  |  |
+| 67 |  | x |  |  |
 | 92 |  |  |  | (clojure) |
 
 ### TODO

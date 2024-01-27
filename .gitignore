@@ -12,3 +12,4 @@ haskell/*
 clojure/.*
 
 cpp/.vscode/
+cpp/a.out
